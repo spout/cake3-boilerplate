@@ -1,0 +1,145 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-06-20 17:27+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/Admin/AdminController.php:22;23;82;83
+msgid "Email"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:26;27
+#: Template/Contacts/add.ctp:6
+msgid "Subject"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:30;31
+#: Template/Contacts/add.ctp:7
+msgid "Message"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:35
+#: Template/Layout/admin.ctp:48
+msgid "Contacts"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:41;42;63;64
+msgid "Title"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:45;46
+msgid "Slug"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:49;50
+#: Template/Admin/Settings/index.ctp:28
+msgid "Content"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:54
+#: Template/Layout/admin.ctp:45
+msgid "Contents"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:56
+msgid "Add content"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:57
+msgid "Edit content"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:67;68
+msgid "Identifier"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:72
+#: Template/Layout/admin.ctp:46
+msgid "Menus"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:78;79
+msgid "Username"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:86;87
+msgid "Firstname"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:90;91
+msgid "Lastname"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:94;95
+msgid "Active"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:98;99
+msgid "Role"
+msgstr ""
+
+#: Controller/Admin/AdminController.php:102;103
+msgid "Superuser"
+msgstr ""
+
+#: Controller/Admin/SettingsController.php:13
+msgid "File was saved successfully !"
+msgstr ""
+
+#: Controller/Admin/SettingsController.php:15
+msgid "An error occured while saving file."
+msgstr ""
+
+#: Template/Admin/FileManager/index.ctp:2
+#: Template/Layout/admin.ctp:49
+msgid "File manager"
+msgstr ""
+
+#: Template/Admin/Settings/index.ctp:2
+#: Template/Layout/admin.ctp:50
+msgid "Settings"
+msgstr ""
+
+#: Template/Admin/Settings/index.ctp:11
+msgid "Filename"
+msgstr ""
+
+#: Template/Admin/Settings/index.ctp:29
+msgid "Save"
+msgstr ""
+
+#: Template/Contacts/add.ctp:2
+msgid "Contact us"
+msgstr ""
+
+#: Template/Contacts/add.ctp:5
+msgid "Your email"
+msgstr ""
+
+#: Template/Contacts/add.ctp:8
+msgid "Send"
+msgstr ""
+
+#: Template/Element/index/pagination.ctp:11
+msgid "{{start}} - {{end}} of {{count}}"
+msgstr ""
+
+#: Template/Layout/admin.ctp:7;36
+#: Template/Layout/crud-view.ctp:23
+msgid "Administration"
+msgstr ""
+
+#: Template/Layout/admin.ctp:47
+msgid "Users"
+msgstr ""
+

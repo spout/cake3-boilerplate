@@ -1,0 +1,161 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-06-20 19:28+0100\n"
+"PO-Revision-Date: 2016-06-20 19:28+0100\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: EMAIL@ADDRESS\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.8\n"
+
+#: Controller/Admin/AdminController.php:22;23;82;83
+msgid "Email"
+msgstr "Email"
+
+#: Controller/Admin/AdminController.php:26;27 Template/Contacts/add.ctp:6
+msgid "Subject"
+msgstr "Sujet"
+
+#: Controller/Admin/AdminController.php:30;31 Template/Contacts/add.ctp:7
+msgid "Message"
+msgstr "Message"
+
+#: Controller/Admin/AdminController.php:35 Template/Layout/admin.ctp:48
+msgid "Contacts"
+msgstr "Contacts"
+
+#: Controller/Admin/AdminController.php:41;42;63;64
+msgid "Title"
+msgstr "Titre"
+
+#: Controller/Admin/AdminController.php:45;46
+msgid "Slug"
+msgstr "Permalien"
+
+#: Controller/Admin/AdminController.php:49;50
+#: Template/Admin/Settings/index.ctp:28
+msgid "Content"
+msgstr "Contenu"
+
+#: Controller/Admin/AdminController.php:54 Template/Layout/admin.ctp:45
+msgid "Contents"
+msgstr "Contenus"
+
+#: Controller/Admin/AdminController.php:56
+msgid "Add content"
+msgstr "Ajouter contenu"
+
+#: Controller/Admin/AdminController.php:57
+msgid "Edit content"
+msgstr "Modifier contenu"
+
+#: Controller/Admin/AdminController.php:67;68
+msgid "Identifier"
+msgstr "Identifiant"
+
+#: Controller/Admin/AdminController.php:72 Template/Layout/admin.ctp:46
+msgid "Menus"
+msgstr "Menus"
+
+#: Controller/Admin/AdminController.php:78;79
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: Controller/Admin/AdminController.php:86;87
+msgid "Firstname"
+msgstr "Prénom"
+
+#: Controller/Admin/AdminController.php:90;91
+msgid "Lastname"
+msgstr "Nom"
+
+#: Controller/Admin/AdminController.php:94;95
+msgid "Active"
+msgstr "Actif"
+
+#: Controller/Admin/AdminController.php:98;99
+msgid "Role"
+msgstr "Rôle"
+
+#: Controller/Admin/AdminController.php:102;103
+msgid "Superuser"
+msgstr "Super utilisateur"
+
+#: Controller/Admin/SettingsController.php:13
+msgid "File was saved successfully !"
+msgstr "Fichier enregistré avec succès !"
+
+#: Controller/Admin/SettingsController.php:15
+msgid "An error occured while saving file."
+msgstr "Une erreur est survenue lors de la sauvegarde du fichier."
+
+#: Template/Admin/FileManager/index.ctp:2 Template/Layout/admin.ctp:49
+msgid "File manager"
+msgstr "Gestionnaire de fichiers"
+
+#: Template/Admin/Settings/index.ctp:2 Template/Layout/admin.ctp:50
+msgid "Settings"
+msgstr "Paramètres"
+
+#: Template/Admin/Settings/index.ctp:11
+msgid "Filename"
+msgstr "Nom de fichier"
+
+#: Template/Admin/Settings/index.ctp:29
+msgid "Save"
+msgstr "Enregistrer"
+
+#: Template/Contacts/add.ctp:2
+msgid "Contact us"
+msgstr "Contactez-nous"
+
+#: Template/Contacts/add.ctp:5
+msgid "Your email"
+msgstr "Votre email"
+
+#: Template/Contacts/add.ctp:8
+msgid "Send"
+msgstr "Envoyer"
+
+#: Template/Element/index/pagination.ctp:11
+msgid "{{start}} - {{end}} of {{count}}"
+msgstr "{{start}} - {{end}} de {{count}}"
+
+#: Template/Layout/admin.ctp:7;36 Template/Layout/crud-view.ctp:23
+msgid "Administration"
+msgstr "Administration"
+
+#: Template/Layout/admin.ctp:47
+msgid "Users"
+msgstr "Utilisateurs"
+
+#~ msgid "Page {{page}} of {{pages}}, showing {{current}} records out of {{count}} total."
+#~ msgstr "Page {{page}} sur {{pages}}, affichage de {{current}} enregistrements sur un total de {{count}}."
+
+#~ msgid "Parent"
+#~ msgstr "Parent"
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid "Index"
+#~ msgstr "Index"
+
+#~ msgid "View"
+#~ msgstr "Voir"
+
+#~ msgid "Add"
+#~ msgstr "Ajouter"
+
+#~ msgid "Edit"
+#~ msgstr "Modifier"
+
+#~ msgid "Delete"
+#~ msgstr "Supprimer"

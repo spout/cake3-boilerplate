@@ -1,0 +1,20 @@
+{
+  "name": "cake3-boilerplate",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "webroot/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "elfinder": "^2.1.6",
+    "ace-builds": "https://github.com/ajaxorg/ace-builds.git#^1.2.3"
+  }
+}
