@@ -49,9 +49,11 @@
             </ul>
         </div>
         <div class="col-sm-9">
-            <?= $this->Flash->render(); ?>
-            <?= $this->fetch('content'); ?>
-            <?= $this->fetch('action_link_forms'); ?>
+            <div id="content">
+                <?= $this->Flash->render(); ?>
+                <?= $this->fetch('content'); ?>
+                <?= $this->fetch('action_link_forms'); ?>
+            </div>
         </div>
     </div>
 </div>
@@ -60,19 +62,24 @@
 
 <?= $this->fetch('script') ?>
 
-<?php /*
 <script>
     $(function() {
-        $(document).on('click', 'td.actions a', function() {
-            var $modal = $('#modal-ajax').modal();
-            var $modalContent = $modal.find('.modal-content');
+        var $content = $('#content');
 
-            $modalContent.load($(this).attr('href'), function () {
+        window.onpopstate = function(event) {
+            $content.load(document.location.pathname);
+        };
 
-            });
+        $(document).on('click', 'td.actions a, .actions-wrapper a', function(e) {
+            e.preventDefault();
+
+            var url = $(this).attr('href');
+            $content.load(url);
+
+            history.pushState({}, '', url);
         });
     });
 </script>
-*/?>
+
 </body>
 </html>

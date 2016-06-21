@@ -63,9 +63,45 @@ abstract class AdminController extends AppController
                         'title' => __("Title"),
                         'label' => __("Title")
                     ],
-                    'identifier' => [
-                        'title' => __("Identifier"),
-                        'label' => __("Identifier"),
+                    'slug' => [
+                        'title' => __("Slug"),
+                        'label' => __("Slug"),
+                    ],
+                ],
+                'relations' => [
+                    'MenuItems' => [
+                        //'fields' => [
+                        //    'id',
+                        //    'menu_id',
+                        //    'title',
+                        //]
+                    ]
+                ],
+                'page_title' => [
+                    'index' => __("Menus")
+                ],
+            ],
+            'MenuItems' => [
+                'fields' => [
+                    'parent_id' => [
+                        'title' => __("Parent"),
+                        'label' => __("Parent")
+                    ],
+                    'menu_id' => [
+                        'title' => __("Menu"),
+                        'label' => __("Menu"),
+                    ],
+                    'model' => [
+                        'title' => __("Model"),
+                        'label' => __("Model"),
+                    ],
+                    'foreign_key' => [
+                        'title' => __("Foreign key"),
+                        'label' => __("Foreign key"),
+                    ],
+                    'title' => [
+                        'title' => __("Title"),
+                        'label' => __("Title"),
                     ],
                 ],
                 'page_title' => [
@@ -74,6 +110,14 @@ abstract class AdminController extends AppController
             ],
             'Users' => [
                 'fields' => [
+                    'active' => [
+                        'title' => __("Active"),
+                        'label' => __("Active"),
+                    ],
+                    'is_superuser' => [
+                        'title' => __("Superuser"),
+                        'label' => __("Superuser"),
+                    ],
                     'username' => [
                         'title' => __("Username"),
                         'label' => __("Username"),
@@ -90,17 +134,9 @@ abstract class AdminController extends AppController
                         'title' => __("Lastname"),
                         'label' => __("Lastname"),
                     ],
-                    'active' => [
-                        'title' => __("Active"),
-                        'label' => __("Active"),
-                    ],
                     'role' => [
                         'title' => __("Role"),
                         'label' => __("Role"),
-                    ],
-                    'is_superuser' => [
-                        'title' => __("Superuser"),
-                        'label' => __("Superuser"),
                     ],
                 ],
                 'page_title' => [],
@@ -148,9 +184,7 @@ abstract class AdminController extends AppController
 
     public function beforeRender(Event $event)
     {
-        if ($this->viewBuilder()->className() === null) {
-            $this->viewBuilder()->className('CrudView\View\CrudView');
-        }
+        $this->viewBuilder()->className('CrudView\View\CrudView');
         $this->viewBuilder()->layout($this->request->is('ajax') ? 'ajax' : 'admin');
     }
 }

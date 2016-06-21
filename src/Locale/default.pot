@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-06-20 17:27+0000\n"
+"POT-Creation-Date: 2016-06-21 16:41+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Controller/Admin/AdminController.php:22;23;82;83
+#: Controller/Admin/AdminController.php:22;23;90;91
 msgid "Email"
 msgstr ""
 
@@ -29,7 +29,7 @@ msgid "Message"
 msgstr ""
 
 #: Controller/Admin/AdminController.php:35
-#: Template/Layout/admin.ctp:48
+#: Template/Layout/admin.ctp:39
 msgid "Contacts"
 msgstr ""
 
@@ -47,7 +47,7 @@ msgid "Content"
 msgstr ""
 
 #: Controller/Admin/AdminController.php:54
-#: Template/Layout/admin.ctp:45
+#: Template/Layout/admin.ctp:35
 msgid "Contents"
 msgstr ""
 
@@ -63,32 +63,32 @@ msgstr ""
 msgid "Identifier"
 msgstr ""
 
-#: Controller/Admin/AdminController.php:72
-#: Template/Layout/admin.ctp:46
+#: Controller/Admin/AdminController.php:80
+#: Template/Layout/admin.ctp:36
 msgid "Menus"
 msgstr ""
 
-#: Controller/Admin/AdminController.php:78;79
+#: Controller/Admin/AdminController.php:86;87
 msgid "Username"
 msgstr ""
 
-#: Controller/Admin/AdminController.php:86;87
+#: Controller/Admin/AdminController.php:94;95
 msgid "Firstname"
 msgstr ""
 
-#: Controller/Admin/AdminController.php:90;91
+#: Controller/Admin/AdminController.php:98;99
 msgid "Lastname"
 msgstr ""
 
-#: Controller/Admin/AdminController.php:94;95
+#: Controller/Admin/AdminController.php:102;103
 msgid "Active"
 msgstr ""
 
-#: Controller/Admin/AdminController.php:98;99
+#: Controller/Admin/AdminController.php:106;107
 msgid "Role"
 msgstr ""
 
-#: Controller/Admin/AdminController.php:102;103
+#: Controller/Admin/AdminController.php:110;111
 msgid "Superuser"
 msgstr ""
 
@@ -101,12 +101,12 @@ msgid "An error occured while saving file."
 msgstr ""
 
 #: Template/Admin/FileManager/index.ctp:2
-#: Template/Layout/admin.ctp:49
+#: Template/Layout/admin.ctp:40
 msgid "File manager"
 msgstr ""
 
 #: Template/Admin/Settings/index.ctp:2
-#: Template/Layout/admin.ctp:50
+#: Template/Layout/admin.ctp:41
 msgid "Settings"
 msgstr ""
 
@@ -134,12 +134,19 @@ msgstr ""
 msgid "{{start}} - {{end}} of {{count}}"
 msgstr ""
 
-#: Template/Layout/admin.ctp:7;36
-#: Template/Layout/crud-view.ctp:23
+#: Template/Layout/admin.ctp:7;26
 msgid "Administration"
 msgstr ""
 
-#: Template/Layout/admin.ctp:47
+#: Template/Layout/admin.ctp:21
+msgid "Toggle navigation"
+msgstr ""
+
+#: Template/Layout/admin.ctp:37
+msgid "Menu items"
+msgstr ""
+
+#: Template/Layout/admin.ctp:38
 msgid "Users"
 msgstr ""
 

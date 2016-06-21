@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-02-21 03:37+0100\n"
-"PO-Revision-Date: 2016-06-19 11:06+0100\n"
+"POT-Creation-Date: 2016-06-21 18:46+0100\n"
+"PO-Revision-Date: 2016-06-21 18:47+0100\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: EMAIL@ADDRESS\n"
 "Language: fr\n"
@@ -19,19 +19,19 @@ msgstr ""
 msgid "Are you sure you want to delete record #{0}?"
 msgstr "Etes-vous sûr de vouloir supprimer l'enregistrement #{0} ?"
 
-#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/form.ctp:24
+#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/form/buttons.ctp:3
 msgid "Save"
 msgstr "Enregistrer"
 
-#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/form.ctp:27
+#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/form/buttons.ctp:6
 msgid "Save & continue editing"
 msgstr "Enregistrer et continuer l'édition"
 
-#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/form.ctp:30
+#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/form/buttons.ctp:9
 msgid "Save & create new"
 msgstr "Enregistrer et créer un nouveau"
 
-#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/form.ctp:33
+#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/form/buttons.ctp:12
 msgid "Back"
 msgstr "Retour"
 
@@ -39,19 +39,19 @@ msgstr "Retour"
 msgid "Apply"
 msgstr "Appliquer"
 
-#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/index/bulk_actions/form_end.ctp:14
+#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/index/bulk_actions/form_end.ctp:12
 msgid "Bulk Actions"
 msgstr "Actions groupées"
 
-#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/index/bulk_actions/form_end.ctp:17
-#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Scaffold/index.ctp:34
+#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/index/bulk_actions/form_end.ctp:15
+#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Scaffold/index.ctp:42
 msgid "Actions"
 msgstr "Actions"
 
 #: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/view/related/has_many.ctp:18
 #: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/view/related/has_one.ctp:12
 msgid "Related {0}"
-msgstr ""
+msgstr "{0} associés"
 
 #: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/Template/Element/view/related/has_many.ctp:53
 msgid "View"
@@ -69,18 +69,18 @@ msgstr "Supprimer"
 msgid "View {0}"
 msgstr "Voir {0}"
 
-#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/View/Helper/CrudViewHelper.php:165
+#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/View/Helper/CrudViewHelper.php:175
 msgid "Yes"
 msgstr "Oui"
 
-#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/View/Helper/CrudViewHelper.php:166
+#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/View/Helper/CrudViewHelper.php:176
 msgid "No"
 msgstr "Non"
 
-#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/View/Helper/CrudViewHelper.php:180;196
+#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/View/Helper/CrudViewHelper.php:190;206
 msgid "N/A"
 msgstr "N/D"
 
-#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/View/Helper/CrudViewHelper.php:298
+#: D:/PhpstormProjects/cake3-boilerplate/vendor/friendsofcake/crud-view/src/View/Helper/CrudViewHelper.php:321
 msgid "Add {0}"
 msgstr "Ajouter {0}"
