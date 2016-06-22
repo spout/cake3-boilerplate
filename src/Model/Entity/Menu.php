@@ -6,7 +6,7 @@ use Symfony\Component\Yaml\Yaml;
 
 class Menu extends Entity
 {
-    protected function _getAttributes()
+    protected function _getAttributesAsArray()
     {
         return !empty($this->_properties['attributes']) ? Yaml::parse($this->_properties['attributes']) : [];
     }

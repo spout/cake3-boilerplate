@@ -6,7 +6,7 @@ use Cake\View\StringTemplate;
     <?php
     if (!empty($menu->attributes)) {
         $stringTemplate = new StringTemplate();
-        $attributes = ' ' . $stringTemplate->formatAttributes($menu->attributes);
+        $attributes = ' ' . $stringTemplate->formatAttributes($menu->attributesAsArray);
     } else {
         $attributes = '';
     }
@@ -14,7 +14,7 @@ use Cake\View\StringTemplate;
     <ul<?php echo $attributes; ?>>
         <?php foreach($menu->menu_items as $item): ?>
             <li<?php echo ($this->request->here == Router::url($item->url)) ? ' class="active"' : ''; ?>>
-                <?php echo $this->Html->link($item->title, $item->url, $item->attributes); ?>
+                <?php echo $this->Html->link($item->title, $item->url, $item->attributesAsArray); ?>
             </li>
         <?php endforeach; ?>
     </ul>

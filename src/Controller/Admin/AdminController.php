@@ -71,10 +71,10 @@ abstract class AdminController extends AppController
                         'title' => __("Slug"),
                         'label' => __("Slug"),
                     ],
-                    //'attributes' => [
-                    //    'title' => __("Title"),
-                    //    'label' => __("Title"),
-                    //],
+                    'attributes' => [
+                        'title' => __("Attributes"),
+                        'label' => __("Attributes"),
+                    ],
                 ],
                 'relations' => [
                     'MenuItems' => [
@@ -111,10 +111,10 @@ abstract class AdminController extends AppController
                         'title' => __("Title"),
                         'label' => __("Title"),
                     ],
-                    //'attributes' => [
-                    //    'title' => __("Title"),
-                    //    'label' => __("Title"),
-                    //],
+                    'attributes' => [
+                        'title' => __("Attributes"),
+                        'label' => __("Attributes"),
+                    ],
                 ],
                 'page_title' => [
                     'index' => __("Menus")
