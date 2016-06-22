@@ -26,6 +26,7 @@
 </head>
 <body>
 <div class="container">
+    <?php echo $this->cell('Menu', ['principal']); ?>
     <?= $this->Flash->render() ?>
     <?= $this->fetch('content') ?>
 </div>

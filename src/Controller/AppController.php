@@ -126,7 +126,7 @@ abstract class AppController extends Controller
             $this->Auth->allow(['index', 'view', 'display']);
         }
 
-        $lang = $this->request->param('lang') ?: 'fr';
+        $lang = $this->request->param('lang') ?: I18n::defaultLocale();
         I18n::locale($lang);
     }
 

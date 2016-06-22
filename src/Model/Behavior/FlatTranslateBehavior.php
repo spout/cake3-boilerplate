@@ -108,10 +108,13 @@ class FlatTranslateBehavior extends Behavior
             return;
         }
 
-        $query->formatResults(function (ResultSetInterface $results) use ($locale) {
+        $query->formatResults(function (/*ResultSetInterface */$results) use ($locale) {
             return $results->map(function ($row) use ($locale) {
                 foreach ($this->config('fields') as $field) {
-                    $row[$field] = $row[sprintf('%s_%s', $field, $locale)];
+                    $key = sprintf('%s_%s', $field, $locale);
+                    if (!empty($row[$key])) {
+                        $row[$field] = $row[$key];
+                    }
                 }
                 return $row;
             });

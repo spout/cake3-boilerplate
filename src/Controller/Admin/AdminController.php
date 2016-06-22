@@ -37,6 +37,10 @@ abstract class AdminController extends AppController
             ],
             'Contents' => [
                 'fields' => [
+                    'parent_id' => [
+                        'title' => __("Parent"),
+                        'label' => __("Parent")
+                    ],
                     'title' => [
                         'title' => __("Title"),
                         'label' => __("Title")

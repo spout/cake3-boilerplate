@@ -12,6 +12,11 @@ class ContentsTable extends Table
 {
     public function initialize(array $config)
     {
+        $this->belongsTo('Parents', [
+            'className' => 'Contents',
+            'foreignKey' => 'parent_id',
+        ]);
+
         $this->addBehavior('Timestamp');
         $this->addBehavior('Sluggable');
         $this->addBehavior('FlatTranslate', [

@@ -1,8 +1,10 @@
 <?php
 namespace App\View\Cell;
 
+use Cake\I18n\I18n;
 use Cake\ORM\TableRegistry;
 use Cake\View\Cell;
+use Symfony\Component\Yaml\Yaml;
 
 /**
  * Class MenusCell
@@ -15,6 +17,13 @@ class MenuCell extends Cell
     {
         $this->loadModel('Menus');
         $menu = $this->Menus->find()->contain(['MenuItems'])->where(compact('slug'))->first();
+
+        /**
+         * For "/" URL without lang, params['lang'] isn't set and cause errors
+         */
+        if (empty($this->request->params['lang'])) {
+            $this->request->params['lang'] = I18n::defaultLocale();
+        }
 
         foreach ($menu->menu_items ?:[] as &$item) {
             if (!empty($item->model) && !empty($item->foreign_key)) {
