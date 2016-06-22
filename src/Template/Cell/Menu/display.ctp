@@ -1,14 +1,12 @@
 <?php
 use Cake\Routing\Router;
+use Cake\View\StringTemplate;
 ?>
 <?php if(!empty($menu->menu_items)): ?>
     <?php
     if (!empty($menu->attributes)) {
-        $attributes = [];
-        foreach ($menu->attributes as $k => $v) {
-            $attributes[] = sprintf('%s="%s"', $k, $v);
-        }
-        $attributes = ' ' . implode(' ', $attributes);
+        $stringTemplate = new StringTemplate();
+        $attributes = ' ' . $stringTemplate->formatAttributes($menu->attributes);
     } else {
         $attributes = '';
     }
