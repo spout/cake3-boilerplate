@@ -47,7 +47,7 @@ abstract class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-        //$this->loadComponent('CakeDC/Users.UsersAuth');
+        $this->loadComponent('CakeDC/Users.UsersAuth');
         $this->loadComponent('Crud.Crud', [
             'actions' => [
                 'Crud.Index',
@@ -122,11 +122,6 @@ abstract class AppController extends Controller
         //    ]
         //]);
 
-        if ($this->Auth) {
-            $this->Auth->config('authorize', 'Controller');
-            $this->Auth->allow(['index', 'view', 'display']);
-        }
-
         $lang = $this->request->param('lang') ?: Locale::getPrimaryLanguage(I18n::defaultLocale());
         I18n::locale(sprintf('%s_%s', $lang, strtoupper($lang)));
     }
@@ -149,6 +144,11 @@ abstract class AppController extends Controller
 
     public function beforeFilter(Event $event)
     {
+        if ($this->Auth) {
+            $this->Auth->config('authorize', 'Controller');
+            $this->Auth->allow(['index', 'view', 'display']);
+        }
+
         $this->eventManager()->on('Crud.beforeHandle', function () {
             $this->Crud->action()->config('messages.success', ['params' => ['class' => 'alert alert-success alert-dismissible']]);
             $this->Crud->action()->config('messages.error', ['params' => ['class' => 'alert alert-danger alert-dismissible']]);

@@ -25,6 +25,10 @@
             </button>
             <?php echo $this->Html->link(__("Administration"), ['prefix' => 'admin', 'controller' => 'dashboard'], ['class' => 'navbar-brand']); ?>
         </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><?php echo $this->Html->link(__("Logout"), ['prefix' => false, 'plugin' => 'CakeDC/Users', 'controller' => 'Users', 'action' => 'logout']); ?></li>
+        </ul>
     </div>
 </nav>
 <div class="container-fluid">
