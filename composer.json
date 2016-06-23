@@ -13,7 +13,8 @@
         "friendsofcake/crud": "~4.2",
         "friendsofcake/crud-view": "dev-master",
         "cakedc/users": "^3.1",
-        "friendsofcake/search": "^1.2"
+        "friendsofcake/search": "^1.2",
+        "josegonzalez/cakephp-upload": "^3.4"
     },
     "require-dev": {
         "psy/psysh": "@stable",
