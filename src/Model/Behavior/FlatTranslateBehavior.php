@@ -11,16 +11,17 @@ use Cake\ORM\Table;
 use Cake\Datasource\ResultSetInterface;
 use Cake\Datasource\EntityInterface;
 use Migrations\AbstractMigration;
+use Locale;
 
 class FlatTranslateBehavior extends Behavior
 {
-    protected $_locale;
+    protected $_language;
 
     protected $_defaultConfig = [
-        'implementedFinders' => ['locale' => 'findLocale'],
-        'implementedMethods' => ['locale' => 'locale'],
+        'implementedFinders' => ['language' => 'findLanguage'],
+        'implementedMethods' => ['language' => 'language'],
         'fields' => [],
-        'defaultLocale' => '',
+        'defaultLanguage' => '',
         'migrationAdapters' => [
             /**
              * Mapping Cake\Database\Driver to Phinx\Db\Adapter
@@ -35,7 +36,7 @@ class FlatTranslateBehavior extends Behavior
     public function __construct(Table $table, array $config = [])
     {
         $config += [
-            'defaultLocale' => I18n::defaultLocale(),
+            'defaultLanguage' => Locale::getPrimaryLanguage(I18n::defaultLocale()),
         ];
 
         parent::__construct($table, $config);
@@ -46,12 +47,20 @@ class FlatTranslateBehavior extends Behavior
         $this->_addTranslateColumns();
     }
 
-    public function locale($locale = null)
+    public function language($language = null)
+    {
+        if ($language === null) {
+            return $this->_language ?: Locale::getPrimaryLanguage(I18n::locale());
+        }
+        return $this->_language = $language;
+    }
+
+    public function getPrimaryLanguage($locale = null)
     {
         if ($locale === null) {
-            return $this->_locale ?: I18n::locale();
+            $locale = I18n::locale();
         }
-        return $this->_locale = (string)$locale;
+        return Locale::getPrimaryLanguage($locale);
     }
 
     protected function _addTranslateColumns()
@@ -90,28 +99,28 @@ class FlatTranslateBehavior extends Behavior
 
     public function beforeSave(Event $event, EntityInterface $entity)
     {
-        $locale = $this->locale();
-        $defaultLocale = $this->config('defaultLocale');
+        $language = $this->getPrimaryLanguage();
+        $defaultLanguage = $this->config('defaultLanguage');
 
         foreach ($this->config('fields') as $field) {
-            $entity->set(sprintf('%s_%s', $field, $locale), $entity->get($field));
-            $entity->set($field, $entity->get(sprintf('%s_%s', $field, $defaultLocale)));
+            $entity->set(sprintf('%s_%s', $field, $language), $entity->get($field));
+            $entity->set($field, $entity->get(sprintf('%s_%s', $field, $defaultLanguage)));
         }
     }
 
     public function beforeFind(Event $event, Query $query, $options)
     {
-        $locale = $this->locale();
-        $defaultLocale = $this->config('defaultLocale');
+        $language = $this->getPrimaryLanguage();
+        $defaultLanguage = $this->config('defaultLanguage');
 
-        if ($locale === $defaultLocale) {
+        if ($language === $defaultLanguage) {
             return;
         }
 
-        $query->formatResults(function (/*ResultSetInterface */$results) use ($locale) {
-            return $results->map(function ($row) use ($locale) {
+        $query->formatResults(function (/*ResultSetInterface */$results) use ($language) {
+            return $results->map(function ($row) use ($language) {
                 foreach ($this->config('fields') as $field) {
-                    $key = sprintf('%s_%s', $field, $locale);
+                    $key = sprintf('%s_%s', $field, $language);
                     if (!empty($row[$key])) {
                         $row[$field] = $row[$key];
                     }
@@ -121,10 +130,10 @@ class FlatTranslateBehavior extends Behavior
         });
     }
 
-    public function findLocale(Query $query, array $options)
+    public function findLanguage(Query $query, array $options)
     {
         list($field, $value) = each($options);
-        return $query->where([sprintf('%s_%s', $field, $this->locale()) => $value]);
+        return $query->where([sprintf('%s_%s', $field, $this->language()) => $value]);
     }
 
 }

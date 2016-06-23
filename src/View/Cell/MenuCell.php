@@ -5,6 +5,7 @@ use Cake\I18n\I18n;
 use Cake\ORM\TableRegistry;
 use Cake\View\Cell;
 use Symfony\Component\Yaml\Yaml;
+use Locale;
 
 /**
  * Class MenusCell
@@ -22,7 +23,7 @@ class MenuCell extends Cell
          * For "/" URL without lang, params['lang'] isn't set and cause errors
          */
         if (empty($this->request->params['lang'])) {
-            $this->request->params['lang'] = I18n::defaultLocale();
+            $this->request->params['lang'] = Locale::getPrimaryLanguage(I18n::defaultLocale());
         }
 
         foreach ($menu->menu_items ?:[] as &$item) {

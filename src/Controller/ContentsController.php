@@ -10,6 +10,6 @@ class ContentsController extends AppController
 {
     public function view($slug)
     {
-        $this->set('content', $this->Contents->find('locale', ['slug' => $slug])->first());
+        $this->set('content', $this->Contents->find('language', ['slug' => $slug])->first());
     }
 }

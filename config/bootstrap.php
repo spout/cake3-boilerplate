@@ -216,9 +216,10 @@ Type::build('datetime')
     ->useImmutable()
     ->useLocaleParser();
 
-ini_set('intl.default_locale', 'fr');
-
 Configure::load('crud-view/defaults');
 
 Configure::config('yaml', new \App\Configure\Engine\YamlConfig());
 Configure::load('site', 'yaml');
+
+//ini_set('intl.default_locale', 'fr_FR');
+//DispatcherFactory::add('LocaleSelector', ['locales' => ['fr_FR', 'en_US']]);

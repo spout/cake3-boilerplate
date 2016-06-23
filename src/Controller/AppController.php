@@ -18,6 +18,7 @@ use Cake\Controller\Controller;
 use Cake\Core\Configure;
 use Cake\Event\Event;
 use Cake\I18n\I18n;
+use Locale;
 
 /**
  * Application Controller
@@ -126,8 +127,8 @@ abstract class AppController extends Controller
             $this->Auth->allow(['index', 'view', 'display']);
         }
 
-        $lang = $this->request->param('lang') ?: I18n::defaultLocale();
-        I18n::locale($lang);
+        $lang = $this->request->param('lang') ?: Locale::getPrimaryLanguage(I18n::defaultLocale());
+        I18n::locale(sprintf('%s_%s', $lang, strtoupper($lang)));
     }
 
     public function isAuthorized($user = null)
