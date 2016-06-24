@@ -39,6 +39,7 @@ class AppView extends View
     public function initialize()
     {
         $this->initializeUI(['layout' => false]);
+        $this->loadHelper('Thumbnail');
 
         $params = array_merge(
             !empty($this->request->params['prefix']) ? [$this->request->params['prefix']] : [],

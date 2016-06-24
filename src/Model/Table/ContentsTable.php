@@ -24,6 +24,7 @@ class ContentsTable extends Table
                 'slug',
                 'title',
                 'content',
+                'meta_description',
             ]
         ]);
     }
