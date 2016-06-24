@@ -82,7 +82,7 @@ class FlatTranslateBehavior extends Behavior
         $columns = $table->schema()->columns();
         $addedColumn = false;
         foreach ($this->config('fields') as $field) {
-            foreach (Configure::read('Site.languages') as $lang) {
+            foreach (Configure::read('Site.locales') as $lang => $locale) {
                 $fieldTranslate = sprintf('%s_%s', $field, $lang);
                 if (!in_array($fieldTranslate, $columns)) {
                     $type = $table->schema()->columnType($field);

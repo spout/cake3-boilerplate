@@ -123,7 +123,7 @@ abstract class AppController extends Controller
         //]);
 
         $lang = $this->request->param('lang') ?: Locale::getPrimaryLanguage(I18n::defaultLocale());
-        I18n::locale(sprintf('%s_%s', $lang, strtoupper($lang)));
+        I18n::locale(Configure::read('Site.locales')[$lang]);
     }
 
     public function isAuthorized($user = null)

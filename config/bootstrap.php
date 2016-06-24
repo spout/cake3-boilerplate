@@ -223,4 +223,4 @@ Configure::config('yaml', new \App\Configure\Engine\YamlConfig());
 Configure::load('site', 'yaml');
 
 //ini_set('intl.default_locale', 'fr_FR');
-//DispatcherFactory::add('LocaleSelector', ['locales' => ['fr_FR', 'en_US']]);
+//DispatcherFactory::add('LocaleSelector', ['locales' => Configure::read('Site.locales')]);

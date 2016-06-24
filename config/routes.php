@@ -19,7 +19,7 @@ Router::addUrlFilter(function ($params, $request) {
 Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
-    foreach (Configure::read('Site.languages') as $lang) {
+    foreach (Configure::read('Site.locales') as $lang => $locale) {
         $routes->scope('/' . $lang, ['lang' => $lang], function ($routes) {
             /* @var $routes \Cake\Routing\RouteBuilder */
 
