@@ -68,21 +68,28 @@
 
 <script>
     $(function() {
-        var $content = $('#content');
-
         window.onpopstate = function(event) {
-            $content.load(document.location.pathname);
+            loadContent(document.location.pathname);
         };
 
         $(document).on('click', 'td.actions a, .actions-wrapper a', function(e) {
             e.preventDefault();
 
             var url = $(this).attr('href');
-            $content.load(url);
+            loadContent(url);
 
             history.pushState({}, '', url);
         });
     });
+
+    function loadContent(url) {
+        $('#content').load(url, function (response, status, xhr) {
+            if (status == "error") {
+                var msg = "Sorry but there was an error: ";
+                alert(msg + xhr.status + " " + xhr.statusText);
+            }
+        });
+    }
 </script>
 
 </body>

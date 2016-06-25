@@ -13,7 +13,7 @@ use Cake\View\StringTemplate;
     ?>
     <ul<?php echo $attributes; ?>>
         <?php foreach($menu->menu_items as $item): ?>
-            <li<?php echo ($this->request->here == Router::url($item->url)) ? ' class="active"' : ''; ?>>
+            <li<?php if($this->request->here == Router::url($item->url)): ?> class="active"<?php endif; ?>>
                 <?php echo $this->Html->link($item->title, $item->url, $item->attributesAsArray); ?>
             </li>
         <?php endforeach; ?>

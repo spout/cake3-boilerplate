@@ -4,7 +4,8 @@ namespace App\Routing\Route;
 use Cake\ORM\TableRegistry;
 use Cake\Routing\Route\Route;
 
-class SlugRoute extends Route {
+class SlugRoute extends Route
+{
 
     function parse($url)
     {
