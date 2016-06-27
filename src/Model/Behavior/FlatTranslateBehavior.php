@@ -85,8 +85,15 @@ class FlatTranslateBehavior extends Behavior
             foreach (Configure::read('Site.locales') as $lang => $locale) {
                 $fieldTranslate = sprintf('%s_%s', $field, $lang);
                 if (!in_array($fieldTranslate, $columns)) {
-                    $type = $table->schema()->columnType($field);
-                    $migrationTable->addColumn($fieldTranslate, $type, ['after' => $field])->update();
+                    $column = $table->schema()->column($field);
+                    $options = [
+                        'length' => $column['length'],
+                        'default' => $column['default'],
+                        'null' => $column['null'],
+                        'comment' => $column['comment'],
+                        'after' => $field,
+                    ];
+                    $migrationTable->addColumn($fieldTranslate, $column['type'], $options)->update();
                     $addedColumn = true;
                 }
             }

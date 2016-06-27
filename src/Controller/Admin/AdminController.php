@@ -53,6 +53,10 @@ abstract class AdminController extends AppController
                         'title' => __("Content"),
                         'label' => __("Content")
                     ],
+                    'meta_description' => [
+                        'title' => __("Meta description"),
+                        'label' => __("Meta description")
+                    ],
                 ],
                 'page_title' => [
                     'index' => __("Contents"),
