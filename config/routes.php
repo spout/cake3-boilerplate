@@ -17,8 +17,6 @@ Router::addUrlFilter(function ($params, $request) {
 });
 
 Router::scope('/', function (RouteBuilder $routes) {
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
-
     foreach (Configure::read('Site.locales') as $lang => $locale) {
         $routes->scope('/' . $lang, ['lang' => $lang], function ($routes) use ($lang) {
             /* @var $routes \Cake\Routing\RouteBuilder */
@@ -38,6 +36,7 @@ Router::scope('/', function (RouteBuilder $routes) {
             $routes->fallbacks('DashedRoute');
         });
     }
+    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 });
 
 Plugin::routes();

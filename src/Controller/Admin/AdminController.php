@@ -115,6 +115,10 @@ abstract class AdminController extends AppController
                         'title' => __("Title"),
                         'label' => __("Title"),
                     ],
+                    'url' => [
+                        'title' => __("URL"),
+                        'label' => __("URL"),
+                    ],
                     'attributes' => [
                         'title' => __("Attributes"),
                         'label' => __("Attributes"),

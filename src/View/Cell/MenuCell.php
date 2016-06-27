@@ -32,6 +32,8 @@ class MenuCell extends Cell
                 $entity = $table->get($item->foreign_key);
                 $item->url = $entity->absoluteUrl;
                 $item->title = $entity->{$table->displayField()};
+            } elseif (!empty($item->route)) {
+                $item->url = Yaml::parse($item->route);
             }
         }
 
