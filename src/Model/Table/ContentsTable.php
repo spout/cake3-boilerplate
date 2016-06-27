@@ -17,6 +17,7 @@ class ContentsTable extends Table
             'foreignKey' => 'parent_id',
         ]);
 
+        $this->addBehavior('Tree');
         $this->addBehavior('Timestamp');
         $this->addBehavior('Sluggable');
         $this->addBehavior('FlatTranslate', [

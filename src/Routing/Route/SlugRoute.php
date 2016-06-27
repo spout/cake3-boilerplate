@@ -15,7 +15,11 @@ class SlugRoute extends Route
         }
         $table = $this->options['table'];
         $tableInstance = TableRegistry::get($table);
-        $field = $tableInstance->hasBehavior('FlatTranslate') ? 'slug_' . $tableInstance->language() : 'slug';
+        if (!empty($this->options['lang']) && $tableInstance->hasBehavior('FlatTranslate')) {
+            $field = 'slug_' . $this->options['lang'];
+        } else {
+            $field = 'slug';
+        }
         $query = $tableInstance->find('all', [
             'conditions' => [$field => $params['slug']],
         ]);

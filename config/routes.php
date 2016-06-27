@@ -20,7 +20,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
     foreach (Configure::read('Site.locales') as $lang => $locale) {
-        $routes->scope('/' . $lang, ['lang' => $lang], function ($routes) {
+        $routes->scope('/' . $lang, ['lang' => $lang], function ($routes) use ($lang) {
             /* @var $routes \Cake\Routing\RouteBuilder */
             $routes->prefix('admin', function ($routes) {
                 /* @var $routes \Cake\Routing\RouteBuilder */
@@ -32,7 +32,7 @@ Router::scope('/', function (RouteBuilder $routes) {
             $routes->connect(
                 '/:slug',
                 ['controller' => 'Contents', 'action' => 'view'],
-                ['_name' => 'contentsView', 'routeClass' => 'SlugRoute', 'table' => 'Contents', 'pass' => ['slug'], 'slug' => '[-\w\d]+']
+                ['_name' => 'contentsView', 'routeClass' => 'SlugRoute', 'table' => 'Contents', 'lang' => $lang, 'pass' => ['slug'], 'slug' => '[-\w\d]+']
             );
             $routes->connect('/contact', ['controller' => 'Contacts', 'action' => 'add']);
             $routes->fallbacks('DashedRoute');
