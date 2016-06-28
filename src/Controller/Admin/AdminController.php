@@ -58,6 +58,12 @@ abstract class AdminController extends AppController
                         'label' => __("Meta description")
                     ],
                 ],
+                'fields_actions' => [
+                    'index' => ['title', 'slug'],
+                    'view' => ['parent_id', 'title', 'slug', 'content', 'meta_description'],
+                    'add' => ['parent_id', 'title', 'slug', 'content', 'meta_description'],
+                    'edit' => ['parent_id', 'title', 'slug', 'content', 'meta_description'],
+                ],
                 'page_title' => [
                     'index' => __("Contents"),
                     //'view' => __("Content"),
@@ -81,13 +87,7 @@ abstract class AdminController extends AppController
                     ],
                 ],
                 'relations' => [
-                    'MenuItems' => [
-                        //'fields' => [
-                        //    'id',
-                        //    'menu_id',
-                        //    'title',
-                        //]
-                    ]
+                    'MenuItems'
                 ],
                 'page_title' => [
                     'index' => __("Menus")
@@ -199,6 +199,21 @@ abstract class AdminController extends AppController
             if (!empty($config)) {
                 $action->config(sprintf('scaffold.%s', $configKey), $config);
             }
+        }
+
+        /**
+         * Per action fields
+         */
+        $perActionFields = Hash::get($configs, sprintf('%s.fields_actions.%s', $this->request->param('controller'), $this->request->param('action')));
+        $fields = Hash::get($configs, sprintf('%s.fields', $this->request->param('controller')));
+        if (!empty($perActionFields)) {
+            $scaffoldFields = [];
+            foreach ($fields as $field => $options) {
+                if (in_array($field, $perActionFields)) {
+                    $scaffoldFields[$field] = $options;
+                }
+            }
+            $action->config('scaffold.fields', $scaffoldFields, $merge = false);
         }
     }
 
