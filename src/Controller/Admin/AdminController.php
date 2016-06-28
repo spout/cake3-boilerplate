@@ -58,7 +58,7 @@ abstract class AdminController extends AppController
                         'label' => __("Meta description")
                     ],
                 ],
-                'fields_actions' => [
+                'per_action_fields' => [
                     'index' => ['title', 'slug'],
                     'view' => ['parent_id', 'title', 'slug', 'content', 'meta_description'],
                     'add' => ['parent_id', 'title', 'slug', 'content', 'meta_description'],
@@ -204,7 +204,7 @@ abstract class AdminController extends AppController
         /**
          * Per action fields
          */
-        $perActionFields = Hash::get($configs, sprintf('%s.fields_actions.%s', $this->request->param('controller'), $this->request->param('action')));
+        $perActionFields = Hash::get($configs, sprintf('%s.per_action_fields.%s', $this->request->param('controller'), $this->request->param('action')));
         $fields = Hash::get($configs, sprintf('%s.fields', $this->request->param('controller')));
         if (!empty($perActionFields)) {
             $scaffoldFields = [];
