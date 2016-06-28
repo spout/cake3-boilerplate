@@ -188,7 +188,7 @@ abstract class AdminController extends AppController
         foreach ($configKeys as $configKey) {
             switch ($configKey) {
                 case 'page_title':
-                    $config = Hash::get($configs, sprintf('%s.%s.%s', $this->request->param('controller'), $this->request->param('action'), $configKey));
+                    $config = Hash::get($configs, sprintf('%s.%s.%s', $this->request->param('controller'), $configKey, $this->request->param('action')));
                     break;
 
                 default:
