@@ -32,7 +32,9 @@ abstract class AdminController extends AppController
                     ],
                 ],
                 'page_title' => [
-                    'index' => __("Contacts")
+                    'index' => __("Contacts"),
+                    'add' => __("Add contact"),
+                    'edit' => __("Edit contact"),
                 ],
             ],
             'Contents' => [
@@ -66,7 +68,6 @@ abstract class AdminController extends AppController
                 ],
                 'page_title' => [
                     'index' => __("Contents"),
-                    //'view' => __("Content"),
                     'add' => __("Add content"),
                     'edit' => __("Edit content"),
                 ],
@@ -90,7 +91,9 @@ abstract class AdminController extends AppController
                     'MenuItems'
                 ],
                 'page_title' => [
-                    'index' => __("Menus")
+                    'index' => __("Menus"),
+                    'add' => __("Add menu"),
+                    'edit' => __("Edit menu"),
                 ],
             ],
             'MenuItems' => [
@@ -125,7 +128,9 @@ abstract class AdminController extends AppController
                     ],
                 ],
                 'page_title' => [
-                    'index' => __("Menus")
+                    'index' => __("Menu items"),
+                    'add' => __("Add menu item"),
+                    'edit' => __("Edit menu item"),
                 ],
             ],
             'Users' => [
@@ -159,7 +164,11 @@ abstract class AdminController extends AppController
                         'label' => __("Role"),
                     ],
                 ],
-                'page_title' => [],
+                'page_title' => [
+                    'index' => __("Users"),
+                    'add' => __("Add user"),
+                    'edit' => __("Edit user"),
+                ],
             ],
         ];
 
