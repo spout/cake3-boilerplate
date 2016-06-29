@@ -23,10 +23,6 @@ return [
     ],
     'Contents' => [
         'fields' => [
-            'parent_id' => [
-                'title' => __("Parent"),
-                'label' => __("Parent")
-            ],
             'title' => [
                 'title' => __("Title"),
                 'label' => __("Title")
@@ -46,9 +42,9 @@ return [
         ],
         'per_action_fields' => [
             'index' => ['title', 'slug'],
-            'view' => ['parent_id', 'title', 'slug', 'content', 'meta_description'],
-            'add' => ['parent_id', 'title', 'slug', 'content', 'meta_description'],
-            'edit' => ['parent_id', 'title', 'slug', 'content', 'meta_description'],
+            'view' => ['title', 'slug', 'content', 'meta_description'],
+            'add' => ['title', 'slug', 'content', 'meta_description'],
+            'edit' => ['title', 'slug', 'content', 'meta_description'],
         ],
         'page_title' => [
             'index' => __("Contents"),
