@@ -12,10 +12,7 @@ class ContentsTable extends Table
 {
     public function initialize(array $config)
     {
-        $this->belongsTo('Parents', [
-            'className' => 'Contents',
-            'foreignKey' => 'parent_id',
-        ]);
+        $this->hasMany('ContentPaths');
 
         $this->addBehavior('Timestamp');
         $this->addBehavior('Sluggable');

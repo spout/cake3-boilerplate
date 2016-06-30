@@ -36,6 +36,15 @@ $theme = !empty($_GET['theme']) ? $_GET['theme'] : 'smoothness';
             $('#elfinder').elfinder({
                 url : '<?php echo $elFinderConnectorUrl; ?>',
                 lang: '<?php echo $lang; ?>'
+                //commandsOptions: {
+                //    getfile: {
+                //        oncomplete: 'destroy',
+                //        folders  : true
+                //    }
+                //},
+                //getFileCallback: function (file) {
+                //    console.log(file.path);
+                //}
             });
         });
     </script>

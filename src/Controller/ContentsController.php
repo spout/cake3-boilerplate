@@ -1,6 +1,8 @@
 <?php
 namespace App\Controller;
 
+use Cake\ORM\TableRegistry;
+
 /**
  * Class ContentsController
  * @package App\Controller
@@ -8,13 +10,14 @@ namespace App\Controller;
  */
 class ContentsController extends AppController
 {
-    public function view($slug)
+    public function view($path)
     {
-        //$this->Contents->recover();
-        //$descendants = $this->Contents->find('children', ['for' => 1]);
-        //foreach ($descendants as $descendant) {
-        //    echo $descendant->title . "\n";
-        //}
-        $this->set('content', $this->Contents->find('language', ['slug' => $slug])->first());
+        $contentPathsTable = TableRegistry::get('ContentPaths');
+        $contentPath = $contentPathsTable
+            ->find('language', ['path' => $path])
+            ->contain(['Contents'])
+            ->firstOrFail();
+
+        $this->set(compact('contentPath'));
     }
 }
