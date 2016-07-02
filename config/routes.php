@@ -27,16 +27,10 @@ Router::scope('/', function (RouteBuilder $routes) {
             });
             $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
             $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
-            //$routes->connect('/contents/view/:path', ['controller' => 'Contents', 'action' => 'view'], ['pass' => ['path'], 'path' => '[-/\w\d]+']);
-            //$routes->connect(
-            //    '/:slug',
-            //    ['controller' => 'Contents', 'action' => 'view'],
-            //    ['_name' => 'contentsView', 'routeClass' => 'SlugRoute', 'table' => 'Contents', 'lang' => $lang, 'pass' => ['slug'], 'slug' => '[-\w\d]+']
-            //);
             $routes->connect(
                 '/:path',
                 ['controller' => 'Contents', 'action' => 'view'],
-                ['_name' => 'contentsView', 'routeClass' => 'ContentPathsRoute', 'lang' => $lang, 'pass' => ['path'], 'path' => '[-/\w\d]+']
+                ['_name' => 'contentsView', 'routeClass' => 'ContentsRoute', 'lang' => $lang, 'pass' => ['path'], 'path' => '[-/\w\d]+']
             );
             $routes->connect('/contact', ['controller' => 'Contacts', 'action' => 'add']);
             $routes->fallbacks('DashedRoute');

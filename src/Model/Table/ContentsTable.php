@@ -2,7 +2,6 @@
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
-use Cake\Validation\Validator;
 
 /**
  * Class ContentsTable
@@ -12,12 +11,11 @@ class ContentsTable extends Table
 {
     public function initialize(array $config)
     {
-        $this->hasMany('ContentPaths');
-
         $this->addBehavior('Timestamp');
         $this->addBehavior('Sluggable');
         $this->addBehavior('FlatTranslate', [
             'fields' => [
+                'path',
                 'slug',
                 'title',
                 'content',

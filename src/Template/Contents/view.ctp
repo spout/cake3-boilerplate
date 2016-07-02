@@ -1,4 +1,4 @@
 <?php
-$this->assign('title', $contentPath->content['title']);
+$this->assign('title', $content->title);
 
-debug($contentPath->toArray());
+debug($content->toArray());

@@ -4,7 +4,7 @@ namespace App\Routing\Route;
 use Cake\ORM\TableRegistry;
 use Cake\Routing\Route\Route;
 
-class ContentPathsRoute extends Route
+class ContentsRoute extends Route
 {
 
     function parse($url)
@@ -13,12 +13,9 @@ class ContentPathsRoute extends Route
         if (empty($params)) {
             return false;
         }
-        $tableInstance = TableRegistry::get('ContentPaths');
-        $field = 'path_' . $this->options['lang'];
-        $query = $tableInstance->find('all', [
-            'conditions' => [$field => $params['path']],
-        ]);
-        if ($query->count()) {
+        $tableInstance = TableRegistry::get('Contents');
+        $query = $tableInstance->find('language', ['path' => $params['path']]);
+        if ($query->first()) {
             return $params;
         }
         return false;
