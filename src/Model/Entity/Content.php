@@ -7,6 +7,6 @@ class Content extends Entity
 {
     protected function _getAbsoluteUrl()
     {
-        return ['controller' => 'Contents', 'action' => 'view', $this->_properties['slug']];
+        return ['controller' => 'Contents', 'action' => 'view', $this->_properties['path']];
     }
 }

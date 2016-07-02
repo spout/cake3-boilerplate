@@ -10,6 +10,7 @@ class ContentsController extends AppController
 {
     public function view($path)
     {
+        //$this->Contents->recover();
         $content = $this->Contents->find('language', ['path' => $path])->firstOrFail();
         $this->set(compact('content'));
     }

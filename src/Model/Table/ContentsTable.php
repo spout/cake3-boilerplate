@@ -11,6 +11,7 @@ class ContentsTable extends Table
 {
     public function initialize(array $config)
     {
+        $this->addBehavior('Tree', ['level' => 'level']);
         $this->addBehavior('Timestamp');
         $this->addBehavior('Sluggable');
         $this->addBehavior('FlatTranslate', [
