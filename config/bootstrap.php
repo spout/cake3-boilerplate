@@ -187,6 +187,7 @@ Plugin::load('CrudView');
 Plugin::load('BootstrapUI');
 Plugin::load('Search');
 Plugin::load('Josegonzalez/Upload');
+Plugin::load('TinyAuth');
 
 // Only try to load DebugKit in development mode
 // Debug Kit should not be installed on a production system

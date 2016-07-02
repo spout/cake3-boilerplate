@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b41026e0ecef9f9aec59cdd7d760563a",
-    "content-hash": "40c716d9f0a008a3565dfaaedf025dc9",
+    "hash": "077fe358b90216de38bfa97c4a83bbb9",
+    "content-hash": "685ead884f35940485c4bf8c486ce9d2",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -407,6 +407,58 @@
             ],
             "description": "A composer installer for CakePHP 3.0+ plugins.",
             "time": "2016-04-28 03:01:34"
+        },
+        {
+            "name": "dereuromark/cakephp-tinyauth",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dereuromark/cakephp-tinyauth.git",
+                "reference": "decc7f06a3a623bbd77a2794d31ef57282b71ce9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dereuromark/cakephp-tinyauth/zipball/decc7f06a3a623bbd77a2794d31ef57282b71ce9",
+                "reference": "decc7f06a3a623bbd77a2794d31ef57282b71ce9",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "fig-r/psr2r-sniffer": "dev-master"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "TinyAuth"
+            },
+            "autoload": {
+                "psr-4": {
+                    "TinyAuth\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Scherer",
+                    "homepage": "http://www.dereuromark.de",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A CakePHP plugin to handle user authorization the easy way.",
+            "homepage": "https://github.com/dereuromark/cakephp-tinyauth",
+            "keywords": [
+                "authorization",
+                "cakephp",
+                "plugin",
+                "roles",
+                "tinyauth"
+            ],
+            "time": "2016-06-30 02:51:52"
         },
         {
             "name": "friendsofcake/bootstrap-ui",
@@ -1720,6 +1772,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "friendsofcake/crud-view": 20,
+        "dereuromark/cakephp-tinyauth": 20,
         "psy/psysh": 0
     },
     "prefer-stable": true,

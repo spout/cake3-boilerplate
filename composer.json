@@ -15,7 +15,8 @@
         "cakedc/users": "^3.1",
         "friendsofcake/search": "^1.2",
         "josegonzalez/cakephp-upload": "^3.4",
-        "imagine/imagine": "^0.6.3"
+        "imagine/imagine": "^0.6.3",
+        "dereuromark/cakephp-tinyauth": "dev-master"
     },
     "require-dev": {
         "psy/psysh": "@stable",
