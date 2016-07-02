@@ -5,7 +5,7 @@ class SettingsController extends AdminController
 {
     public function index($file = null)
     {
-        $files = glob(CONFIG . '*.yml');
+        $files = glob(CONFIG . '*.{yml,ini}', GLOB_BRACE);
 
         if (!empty($file)) {
             if ($this->request->is('post')) {

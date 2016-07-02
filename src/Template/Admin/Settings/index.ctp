@@ -24,8 +24,13 @@ $this->element('ace-editor');
 </table>
 <?php
 if (!empty($file)) {
+    $extension = pathinfo($file, PATHINFO_EXTENSION);
+    $extensionMap = [
+        'yml' => 'yaml',
+        'ini' => 'ini',
+    ];
     echo $this->Form->create();
-    echo $this->Form->input('content', ['label' => __("Content"), 'type' => 'textarea', 'data-editor' => 'yaml']);
+    echo $this->Form->input('content', ['label' => __("Content"), 'type' => 'textarea', 'data-editor' => $extensionMap[$extension]]);
     echo $this->Form->submit(__("Save"), ['class' => 'btn btn-primary']);
     echo $this->Form->end();
 }
