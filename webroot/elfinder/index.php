@@ -33,19 +33,16 @@ $theme = !empty($_GET['theme']) ? $_GET['theme'] : 'smoothness';
         // Documentation for client options:
         // https://github.com/Studio-42/elFinder/wiki/Client-configuration-options
         $(document).ready(function() {
-            $('#elfinder').elfinder({
+            var options = {
                 url : '<?php echo $elFinderConnectorUrl; ?>',
                 lang: '<?php echo $lang; ?>'
-                //commandsOptions: {
-                //    getfile: {
-                //        oncomplete: 'destroy',
-                //        folders  : true
-                //    }
-                //},
-                //getFileCallback: function (file) {
-                //    console.log(file.path);
-                //}
-            });
+            };
+
+            <?php if(!empty($_GET['optionsCallback'])): ?>
+            $.extend(options, window.parent.<?php echo $_GET['optionsCallback']; ?>());
+            <?php endif; ?>
+
+            $('#elfinder').elfinder(options);
         });
     </script>
 </head>

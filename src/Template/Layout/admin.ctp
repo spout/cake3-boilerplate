@@ -40,6 +40,7 @@
                 ['title' => __("Menus"), 'icon' => 'link', 'url' => ['controller' => 'Menus', 'action' => 'index']],
                 ['title' => __("Users"), 'icon' => 'users', 'url' => ['controller' => 'Users', 'action' => 'index']],
                 ['title' => __("Contacts"), 'icon' => 'envelope', 'url' => ['controller' => 'Contacts', 'action' => 'index']],
+                ['title' => __("Galleries"), 'icon' => 'picture-o', 'url' => ['controller' => 'Galleries', 'action' => 'index']],
                 ['title' => __("File manager"), 'icon' => 'folder', 'url' => ['controller' => 'FileManager', 'action' => 'index']],
                 ['title' => __("Settings"), 'icon' => 'cogs', 'url' => ['controller' => 'Settings', 'action' => 'index']],
             ];
@@ -90,6 +91,20 @@
             }
         });
     }
+
+    //function elFinderOptionsCallback() {
+    //    return {
+    //        commandsOptions: {
+    //            getfile: {
+    //                //oncomplete: 'destroy',
+    //                folders: true
+    //            }
+    //        },
+    //        getFileCallback: function (file) {
+    //            console.log(file.path);
+    //        }
+    //    };
+    //}
 </script>
 
 </body>
