@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-06-28 18:47+0100\n"
-"PO-Revision-Date: 2016-06-28 18:49+0100\n"
+"POT-Creation-Date: 2016-07-07 20:53+0100\n"
+"PO-Revision-Date: 2016-07-07 20:53+0100\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: EMAIL@ADDRESS\n"
 "Language: fr\n"
@@ -15,143 +15,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.8\n"
 
-#: Controller/Admin/AdminController.php:22;23;151;152
-msgid "Email"
-msgstr "Email"
-
-#: Controller/Admin/AdminController.php:26;27 Template/Contacts/add.ctp:6
-msgid "Subject"
-msgstr "Sujet"
-
-#: Controller/Admin/AdminController.php:30;31 Template/Contacts/add.ctp:7
-msgid "Message"
-msgstr "Message"
-
-#: Controller/Admin/AdminController.php:35 Template/Layout/admin.ctp:42
-msgid "Contacts"
-msgstr "Contacts"
-
-#: Controller/Admin/AdminController.php:36
-msgid "Add contact"
-msgstr "Ajouter contact"
-
-#: Controller/Admin/AdminController.php:37
-msgid "Edit contact"
-msgstr "Modifier contact"
-
-#: Controller/Admin/AdminController.php:43;44;102;103
-msgid "Parent"
-msgstr "Parent"
-
-#: Controller/Admin/AdminController.php:47;48;78;79;118;119
-msgid "Title"
-msgstr "Titre"
-
-#: Controller/Admin/AdminController.php:51;52;82;83
-msgid "Slug"
-msgstr "Permalien"
-
-#: Controller/Admin/AdminController.php:55;56
-#: Template/Admin/Settings/index.ctp:28
-msgid "Content"
-msgstr "Contenu"
-
-#: Controller/Admin/AdminController.php:59;60
-msgid "Meta description"
-msgstr "Meta description"
-
-#: Controller/Admin/AdminController.php:70 Template/Layout/admin.ctp:39
-msgid "Contents"
-msgstr "Contenus"
-
-#: Controller/Admin/AdminController.php:71
-msgid "Add content"
-msgstr "Ajouter contenu"
-
-#: Controller/Admin/AdminController.php:72
-msgid "Edit content"
-msgstr "Modifier contenu"
-
-#: Controller/Admin/AdminController.php:86;87;126;127
-msgid "Attributes"
-msgstr "Attributs"
-
-#: Controller/Admin/AdminController.php:94 Template/Layout/admin.ctp:40
-msgid "Menus"
-msgstr "Menus"
-
-#: Controller/Admin/AdminController.php:95
-msgid "Add menu"
-msgstr "Ajouter menu"
-
-#: Controller/Admin/AdminController.php:96
-msgid "Edit menu"
-msgstr "Modifier menu"
-
-#: Controller/Admin/AdminController.php:106;107
-msgid "Menu"
-msgstr "Menu"
-
-#: Controller/Admin/AdminController.php:110;111
-msgid "Model"
-msgstr "Modèle"
-
-#: Controller/Admin/AdminController.php:114;115
-msgid "Foreign key"
-msgstr "Clé étrangère"
-
-#: Controller/Admin/AdminController.php:122;123
-msgid "URL"
-msgstr "URL"
-
-#: Controller/Admin/AdminController.php:131
-msgid "Menu items"
-msgstr "Eléments de menu"
-
-#: Controller/Admin/AdminController.php:132
-msgid "Add menu item"
-msgstr "Ajouter élément de menu"
-
-#: Controller/Admin/AdminController.php:133
-msgid "Edit menu item"
-msgstr "Modifier élément de menu"
-
-#: Controller/Admin/AdminController.php:139;140
-msgid "Active"
-msgstr "Actif"
-
-#: Controller/Admin/AdminController.php:143;144
-msgid "Superuser"
-msgstr "Super utilisateur"
-
-#: Controller/Admin/AdminController.php:147;148
-msgid "Username"
-msgstr "Nom d'utilisateur"
-
-#: Controller/Admin/AdminController.php:155;156
-msgid "Firstname"
-msgstr "Prénom"
-
-#: Controller/Admin/AdminController.php:159;160
-msgid "Lastname"
-msgstr "Nom"
-
-#: Controller/Admin/AdminController.php:163;164
-msgid "Role"
-msgstr "Rôle"
-
-#: Controller/Admin/AdminController.php:168 Template/Layout/admin.ctp:41
-msgid "Users"
-msgstr "Utilisateurs"
-
-#: Controller/Admin/AdminController.php:169
-msgid "Add user"
-msgstr "Ajouter utilisateur"
-
-#: Controller/Admin/AdminController.php:170
-msgid "Edit user"
-msgstr "Modifier utilisateur"
-
 #: Controller/Admin/SettingsController.php:13
 msgid "File was saved successfully !"
 msgstr "Fichier enregistré avec succès !"
@@ -160,11 +23,11 @@ msgstr "Fichier enregistré avec succès !"
 msgid "An error occured while saving file."
 msgstr "Une erreur est survenue lors de la sauvegarde du fichier."
 
-#: Template/Admin/FileManager/index.ctp:2 Template/Layout/admin.ctp:43
+#: Template/Admin/FileManager/index.ctp:2 Template/Layout/admin.ctp:44
 msgid "File manager"
 msgstr "Gestionnaire de fichiers"
 
-#: Template/Admin/Settings/index.ctp:2 Template/Layout/admin.ctp:44
+#: Template/Admin/Settings/index.ctp:2 Template/Layout/admin.ctp:45
 msgid "Settings"
 msgstr "Paramètres"
 
@@ -172,7 +35,11 @@ msgstr "Paramètres"
 msgid "Filename"
 msgstr "Nom de fichier"
 
-#: Template/Admin/Settings/index.ctp:29
+#: Template/Admin/Settings/index.ctp:33 config/scaffolds.php:35;36
+msgid "Content"
+msgstr "Contenu"
+
+#: Template/Admin/Settings/index.ctp:34
 msgid "Save"
 msgstr "Enregistrer"
 
@@ -183,6 +50,14 @@ msgstr "Contactez-nous"
 #: Template/Contacts/add.ctp:5
 msgid "Your email"
 msgstr "Votre email"
+
+#: Template/Contacts/add.ctp:6 config/scaffolds.php:10;11
+msgid "Subject"
+msgstr "Sujet"
+
+#: Template/Contacts/add.ctp:7 config/scaffolds.php:14;15
+msgid "Message"
+msgstr "Message"
 
 #: Template/Contacts/add.ctp:8
 msgid "Send"
@@ -204,9 +79,149 @@ msgstr "Basculer la navigation"
 msgid "Logout"
 msgstr "Déconnexion"
 
+#: Template/Layout/admin.ctp:39 config/scaffolds.php:50
+msgid "Contents"
+msgstr "Contenus"
+
+#: Template/Layout/admin.ctp:40 config/scaffolds.php:74
+msgid "Menus"
+msgstr "Menus"
+
+#: Template/Layout/admin.ctp:41 config/scaffolds.php:148
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: Template/Layout/admin.ctp:42 config/scaffolds.php:19
+msgid "Contacts"
+msgstr "Contacts"
+
+#: Template/Layout/admin.ctp:43 config/scaffolds.php:169
+msgid "Galleries"
+msgstr "Galeries"
+
 #: Template/Pages/home.ctp:2
 msgid "Homepage"
 msgstr "Page d'accueil"
+
+#: config/scaffolds.php:6;7;131;132
+msgid "Email"
+msgstr "Email"
+
+#: config/scaffolds.php:20
+msgid "Add contact"
+msgstr "Ajouter contact"
+
+#: config/scaffolds.php:21
+msgid "Edit contact"
+msgstr "Modifier contact"
+
+#: config/scaffolds.php:27;28;58;59;98;99;156;157
+msgid "Title"
+msgstr "Titre"
+
+#: config/scaffolds.php:31;32;62;63;160;161
+msgid "Slug"
+msgstr "Permalien"
+
+#: config/scaffolds.php:39;40
+msgid "Meta description"
+msgstr "Meta description"
+
+#: config/scaffolds.php:51
+msgid "Add content"
+msgstr "Ajouter contenu"
+
+#: config/scaffolds.php:52
+msgid "Edit content"
+msgstr "Modifier contenu"
+
+#: config/scaffolds.php:66;67;106;107
+msgid "Attributes"
+msgstr "Attributs"
+
+#: config/scaffolds.php:75
+msgid "Add menu"
+msgstr "Ajouter menu"
+
+#: config/scaffolds.php:76
+msgid "Edit menu"
+msgstr "Modifier menu"
+
+#: config/scaffolds.php:82;83
+msgid "Parent"
+msgstr "Parent"
+
+#: config/scaffolds.php:86;87
+msgid "Menu"
+msgstr "Menu"
+
+#: config/scaffolds.php:90;91
+msgid "Model"
+msgstr "Modèle"
+
+#: config/scaffolds.php:94;95
+msgid "Foreign key"
+msgstr "Clé étrangère"
+
+#: config/scaffolds.php:102;103
+msgid "URL"
+msgstr "URL"
+
+#: config/scaffolds.php:111
+msgid "Menu items"
+msgstr "Eléments de menu"
+
+#: config/scaffolds.php:112
+msgid "Add menu item"
+msgstr "Ajouter élément de menu"
+
+#: config/scaffolds.php:113
+msgid "Edit menu item"
+msgstr "Modifier élément de menu"
+
+#: config/scaffolds.php:119;120
+msgid "Active"
+msgstr "Actif"
+
+#: config/scaffolds.php:123;124
+msgid "Superuser"
+msgstr "Super utilisateur"
+
+#: config/scaffolds.php:127;128
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: config/scaffolds.php:135;136
+msgid "Firstname"
+msgstr "Prénom"
+
+#: config/scaffolds.php:139;140
+msgid "Lastname"
+msgstr "Nom"
+
+#: config/scaffolds.php:143;144
+msgid "Role"
+msgstr "Rôle"
+
+#: config/scaffolds.php:149
+msgid "Add user"
+msgstr "Ajouter utilisateur"
+
+#: config/scaffolds.php:150
+msgid "Edit user"
+msgstr "Modifier utilisateur"
+
+#: config/scaffolds.php:164;165
+msgid "Folder"
+msgstr "Dossier"
+
+#: config/scaffolds.php:170
+msgid "Add gallery"
+msgstr "Ajouter galerie"
+
+#: config/scaffolds.php:171
+msgid "Edit gallery"
+msgstr "Modifier galerie"
 
 #~ msgid "Identifier"
 #~ msgstr "Identifiant"

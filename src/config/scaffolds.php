@@ -150,4 +150,25 @@ return [
             'edit' => __("Edit user"),
         ],
     ],
+    'Galleries' => [
+        'fields' => [
+            'title' => [
+                'title' => __("Title"),
+                'label' => __("Title"),
+            ],
+            'slug' => [
+                'title' => __("Slug"),
+                'label' => __("Slug"),
+            ],
+            'folder' => [
+                'title' => __("Folder"),
+                'label' => __("Folder"),
+            ],
+        ],
+        'page_title' => [
+            'index' => __("Galleries"),
+            'add' => __("Add gallery"),
+            'edit' => __("Edit gallery"),
+        ],
+    ],
 ];

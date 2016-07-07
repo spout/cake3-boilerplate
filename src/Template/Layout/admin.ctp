@@ -75,18 +75,18 @@ $elFinderUrl = $this->request->webroot . 'elfinder/?' . http_build_query([
 ?>
 <script>
     $(function() {
-        window.onpopstate = function(event) {
-            loadContent(document.location.pathname);
-        };
-
-        $(document).on('click', 'td.actions a, .actions-wrapper a', function(e) {
-            e.preventDefault();
-
-            var url = $(this).attr('href');
-            loadContent(url);
-
-            history.pushState({}, '', url);
-        });
+        //window.onpopstate = function(event) {
+        //    loadContent(document.location.pathname);
+        //};
+        //
+        //$(document).on('click', 'td.actions a, .actions-wrapper a', function(e) {
+        //    e.preventDefault();
+        //
+        //    var url = $(this).attr('href');
+        //    loadContent(url);
+        //
+        //    history.pushState({}, '', url);
+        //});
 
         $('.scaffold-galleries-add #folder').closest('.form-group').after('<iframe src="<?php echo $elFinderUrl; ?>" class="elfinder"></iframe>');
     });
