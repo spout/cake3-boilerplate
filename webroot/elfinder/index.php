@@ -20,6 +20,12 @@ $theme = !empty($_GET['theme']) ? $_GET['theme'] : 'smoothness';
     <link rel="stylesheet" type="text/css" href="<?php echo $elFinderUrl; ?>css/elfinder.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $elFinderUrl; ?>css/theme.css">
 
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+
     <!-- elFinder JS (REQUIRED) -->
     <script src="<?php echo $elFinderUrl; ?>js/elfinder.min.js"></script>
 

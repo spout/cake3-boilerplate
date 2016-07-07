@@ -67,6 +67,12 @@
 
 <?= $this->fetch('script') ?>
 
+<?php
+$elFinderUrl = $this->request->webroot . 'elfinder/?' . http_build_query([
+        'lang' => $this->request->param('lang'),
+        'optionsCallback' => 'elFinderOptionsCallback'
+    ]);
+?>
 <script>
     $(function() {
         window.onpopstate = function(event) {
@@ -81,6 +87,8 @@
 
             history.pushState({}, '', url);
         });
+
+        $('.scaffold-galleries-add #folder').closest('.form-group').after('<iframe src="<?php echo $elFinderUrl; ?>" class="elfinder"></iframe>');
     });
 
     function loadContent(url) {
@@ -92,19 +100,19 @@
         });
     }
 
-    //function elFinderOptionsCallback() {
-    //    return {
-    //        commandsOptions: {
-    //            getfile: {
-    //                //oncomplete: 'destroy',
-    //                folders: true
-    //            }
-    //        },
-    //        getFileCallback: function (file) {
-    //            console.log(file.path);
-    //        }
-    //    };
-    //}
+    function elFinderOptionsCallback() {
+        return {
+            commandsOptions: {
+                getfile: {
+                    //oncomplete: 'destroy',
+                    folders: true
+                }
+            },
+            getFileCallback: function (file) {
+                $('.scaffold-galleries-add #folder').val(file.path);
+            }
+        };
+    }
 </script>
 
 </body>
