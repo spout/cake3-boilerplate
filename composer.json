@@ -16,7 +16,8 @@
         "friendsofcake/search": "^1.2",
         "josegonzalez/cakephp-upload": "^3.4",
         "imagine/imagine": "^0.6.3",
-        "dereuromark/cakephp-tinyauth": "dev-master"
+        "dereuromark/cakephp-tinyauth": "dev-master",
+        "sepia/po-parser": "^4.2"
     },
     "require-dev": {
         "psy/psysh": "@stable",

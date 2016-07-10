@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "077fe358b90216de38bfa97c4a83bbb9",
-    "content-hash": "685ead884f35940485c4bf8c486ce9d2",
+    "hash": "768cedc936f340a8733212230c9759fb",
+    "content-hash": "5f7622721f51f6fbf84406d3fdff884d",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -193,16 +193,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "3.2.11",
+            "version": "3.2.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "2c1463f4f80ec138f65a87a9c7d95d466a051e6f"
+                "reference": "c318328d981cad94e223ec95c79fd0a2e98679bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/2c1463f4f80ec138f65a87a9c7d95d466a051e6f",
-                "reference": "2c1463f4f80ec138f65a87a9c7d95d466a051e6f",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/c318328d981cad94e223ec95c79fd0a2e98679bc",
+                "reference": "c318328d981cad94e223ec95c79fd0a2e98679bc",
                 "shasum": ""
             },
             "require": {
@@ -261,7 +261,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-06-21 03:01:37"
+            "time": "2016-07-09 02:08:27"
         },
         {
             "name": "cakephp/chronos",
@@ -1036,6 +1036,54 @@
                 "phinx"
             ],
             "time": "2016-03-07 14:09:22"
+        },
+        {
+            "name": "sepia/po-parser",
+            "version": "4.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulferras/PHP-po-parser.git",
+                "reference": "4906b3bc357e1028b84c3cb0ee1d1d1970a21fbb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulferras/PHP-po-parser/zipball/4906b3bc357e1028b84c3cb0ee1d1d1970a21fbb",
+                "reference": "4906b3bc357e1028b84c3cb0ee1d1d1970a21fbb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "squizlabs/php_codesniffer": "1.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sepia": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raúl Ferràs",
+                    "email": "raul.ferras@gmail.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Gettext *.PO file parser for PHP.",
+            "homepage": "https://github.com/raulferras/PHP-po-parser",
+            "keywords": [
+                "gettext",
+                "i10n",
+                "i18n",
+                "po"
+            ],
+            "time": "2015-06-09 08:01:21"
         },
         {
             "name": "symfony/config",
