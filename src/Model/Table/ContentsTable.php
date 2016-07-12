@@ -23,6 +23,7 @@ class ContentsTable extends Table
                 'meta_description',
             ]
         ]);
+        $this->addBehavior('Counter', ['field' => 'views']);
     }
 
     //public function validationDefault(Validator $validator)

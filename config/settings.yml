@@ -1,7 +1,7 @@
 Site:
     name: Spout's website
     locales:
-        fr: fr_BE
+        fr: fr_FR
         en: en_GB
-        nl: nl_BE
+        nl: nl_NL
         de: de_DE

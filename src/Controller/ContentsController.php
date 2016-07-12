@@ -12,6 +12,7 @@ class ContentsController extends AppController
     {
         //$this->Contents->recover();
         $content = $this->Contents->find('language', ['path' => $path])->firstOrFail();
+        $this->Contents->incrementCounter($content->id);
         $this->set(compact('content'));
     }
 }
