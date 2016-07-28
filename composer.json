@@ -12,7 +12,7 @@
         "cakephp/plugin-installer": "*",
         "friendsofcake/crud": "~4.2",
         "friendsofcake/crud-view": "dev-master",
-        "cakedc/users": "^3.1",
+        "cakedc/users": "^3.2",
         "friendsofcake/search": "^1.2",
         "josegonzalez/cakephp-upload": "^3.4",
         "imagine/imagine": "^0.6.3",
