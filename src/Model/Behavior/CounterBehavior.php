@@ -14,10 +14,10 @@ class CounterBehavior extends Behavior
     {
         $field = $this->config('field');
         $query = $this->_table->query();
-        $result = $query
+        return $query
             ->update()
             ->set(
-                $query->newExpr(sprintf('%s = %s + 1', $field, $field))
+                $query->newExpr(sprintf('%1$s = %1$s + 1', $field))
             )
             ->where([
                 'id' => $id
