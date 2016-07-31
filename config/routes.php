@@ -6,7 +6,7 @@ use Cake\Core\Configure;
 use Cake\Routing\Route\DashedRoute;
 
 Router::defaultRouteClass(DashedRoute::class);
-Router::extensions(['json']);
+Router::extensions(['json', 'xml', 'txt']);
 
 Router::addUrlFilter(function ($params, $request) {
     /* @var $request \Cake\Network\Request */

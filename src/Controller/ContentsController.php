@@ -15,4 +15,12 @@ class ContentsController extends AppController
         $this->Contents->incrementCounter($content->id);
         $this->set(compact('content'));
     }
+
+    public function upload()
+    {
+        if ($this->request->is('post')) {
+            debug($this->request->data['file']);
+            die();
+        }
+    }
 }

@@ -37,6 +37,7 @@
             <?php
             $navs = [
                 ['title' => __("Contents"), 'icon' => 'pencil', 'url' => ['controller' => 'Contents', 'action' => 'index']],
+                ['title' => __("Articles"), 'icon' => 'newspaper-o', 'url' => ['controller' => 'Articles', 'action' => 'index']],
                 ['title' => __("Menus"), 'icon' => 'link', 'url' => ['controller' => 'Menus', 'action' => 'index']],
                 ['title' => __("Users"), 'icon' => 'users', 'url' => ['controller' => 'Users', 'action' => 'index']],
                 ['title' => __("Contacts"), 'icon' => 'envelope', 'url' => ['controller' => 'Contacts', 'action' => 'index']],

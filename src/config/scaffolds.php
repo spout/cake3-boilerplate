@@ -52,6 +52,33 @@ return [
             'edit' => __("Edit content"),
         ],
     ],
+    'Articles' => [
+        'fields' => [
+            'title' => [
+                'title' => __("Title"),
+                'label' => __("Title")
+            ],
+            'slug' => [
+                'title' => __("Slug"),
+                'label' => __("Slug")
+            ],
+            'body' => [
+                'title' => __("Body"),
+                'label' => __("Body")
+            ],
+        ],
+        'per_action_fields' => [
+            'index' => ['title', 'slug'],
+            'view' => ['title', 'slug', 'body'],
+            'add' => ['title', 'slug', 'body'],
+            'edit' => ['title', 'slug', 'body'],
+        ],
+        'page_title' => [
+            'index' => __("Articles"),
+            'add' => __("Add article"),
+            'edit' => __("Edit article"),
+        ],
+    ],
     'Menus' => [
         'fields' => [
             'title' => [

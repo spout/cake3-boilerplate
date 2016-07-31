@@ -25,19 +25,38 @@
     <![endif]-->
 </head>
 <body>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><?php echo \Cake\Core\Configure::read('Site.name'); ?></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <?php echo $this->cell('Menu', ['principal']); ?>
+            <?php echo $this->element('language-switcher'); ?>
+        </div>
+    </div>
+</nav>
+
 <div class="container">
-    <?php echo $this->cell('Menu', ['principal']); ?>
     <?= $this->Flash->render() ?>
     <?= $this->fetch('content') ?>
 </div>
 
 <?php
-$this->Html->script([
+echo $this->Html->script([
     'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
     'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
-], [
+]/*, [
     'block' => true
-]);
+]*/);
 ?>
 <?= $this->fetch('script') ?>
 </body>
