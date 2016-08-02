@@ -193,16 +193,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "3.2.12",
+            "version": "3.2.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "c318328d981cad94e223ec95c79fd0a2e98679bc"
+                "reference": "ed597225b2328ce80476e25fc06d1e4da79e17c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/c318328d981cad94e223ec95c79fd0a2e98679bc",
-                "reference": "c318328d981cad94e223ec95c79fd0a2e98679bc",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/ed597225b2328ce80476e25fc06d1e4da79e17c1",
+                "reference": "ed597225b2328ce80476e25fc06d1e4da79e17c1",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +228,7 @@
                 "cakephp/validation": "self.version"
             },
             "require-dev": {
-                "cakephp/cakephp-codesniffer": "dev-master",
+                "cakephp/cakephp-codesniffer": "~2.1",
                 "phpunit/phpunit": "*"
             },
             "suggest": {
@@ -261,7 +261,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-07-09 02:08:27"
+            "time": "2016-08-02 02:14:27"
         },
         {
             "name": "cakephp/chronos",
