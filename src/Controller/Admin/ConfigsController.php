@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Admin;
 
-class SettingsController extends AdminController
+class ConfigsController extends AdminController
 {
     public function index($file = null)
     {

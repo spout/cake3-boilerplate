@@ -1,5 +1,5 @@
 <?php
-$title = __("Settings");
+$title = __("Configs");
 $this->assign('title', $title);
 
 $this->element('ace-editor');

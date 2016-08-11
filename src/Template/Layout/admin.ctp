@@ -43,7 +43,7 @@
                 ['title' => __("Contacts"), 'icon' => 'envelope', 'url' => ['controller' => 'Contacts', 'action' => 'index']],
                 ['title' => __("Galleries"), 'icon' => 'picture-o', 'url' => ['controller' => 'Galleries', 'action' => 'index']],
                 ['title' => __("File manager"), 'icon' => 'folder', 'url' => ['controller' => 'FileManager', 'action' => 'index']],
-                ['title' => __("Settings"), 'icon' => 'cogs', 'url' => ['controller' => 'Settings', 'action' => 'index']],
+                ['title' => __("Configs"), 'icon' => 'cogs', 'url' => ['controller' => 'Configs', 'action' => 'index']],
             ];
             ?>
             <ul class="nav nav-pills nav-stacked">
