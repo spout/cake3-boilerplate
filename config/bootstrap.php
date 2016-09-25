@@ -223,5 +223,7 @@ Configure::load('crud-view/defaults');
 Configure::config('yaml', new \App\Configure\Engine\YamlConfig());
 Configure::load('settings', 'yaml');
 
+Configure::config('database', new \App\Configure\Engine\DatabaseConfig());
+
 //ini_set('intl.default_locale', 'fr_FR');
 //DispatcherFactory::add('LocaleSelector', ['locales' => Configure::read('Site.locales')]);
