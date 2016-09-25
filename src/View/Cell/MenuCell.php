@@ -17,7 +17,9 @@ class MenuCell extends Cell
     public function display($slug)
     {
         $this->loadModel('Menus');
-        $menu = $this->Menus->find()->contain(['MenuItems'])->where(compact('slug'))->first();
+        $menu = $this->Menus->find()->contain(['MenuItems' => function($q) {
+            return $q->order(['sort' => 'ASC']);
+        }])->where(compact('slug'))->first();
 
         /**
          * For "/" URL without lang, params['lang'] isn't set and cause errors
@@ -31,7 +33,9 @@ class MenuCell extends Cell
                 $table = TableRegistry::get($item->model);
                 $entity = $table->get($item->foreign_key);
                 $item->url = $entity->absoluteUrl;
-                $item->title = $entity->{$table->displayField()};
+                if (empty($item->title)) {
+                    $item->title = $entity->{$table->displayField()};
+                }
             } elseif (!empty($item->route)) {
                 $item->url = Yaml::parse($item->route);
             }
