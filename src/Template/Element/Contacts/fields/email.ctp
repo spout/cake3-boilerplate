@@ -1,0 +1,1 @@
+<a href="mailto:<?php echo $singularVar['email']; ?>"><?php echo $singularVar['email']; ?></a>
