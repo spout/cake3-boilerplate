@@ -8,7 +8,6 @@ use Cake\Event\Event;
 use Cake\I18n\I18n;
 use Cake\ORM\Query;
 use Cake\ORM\Table;
-use Cake\Datasource\ResultSetInterface;
 use Cake\Datasource\EntityInterface;
 use Migrations\AbstractMigration;
 use Locale;
@@ -106,11 +105,9 @@ class FlatTranslateBehavior extends Behavior
 
     public function beforeSave(Event $event, EntityInterface $entity)
     {
-        $language = $this->getPrimaryLanguage();
         $defaultLanguage = $this->config('defaultLanguage');
 
         foreach ($this->config('fields') as $field) {
-            $entity->set(sprintf('%s_%s', $field, $language), $entity->get($field));
             $entity->set($field, $entity->get(sprintf('%s_%s', $field, $defaultLanguage)));
         }
     }
@@ -124,7 +121,7 @@ class FlatTranslateBehavior extends Behavior
             return;
         }
 
-        $query->formatResults(function (/*ResultSetInterface */$results) use ($language) {
+        $query->formatResults(function ($results) use ($language) {
             return $results->map(function ($row) use ($language) {
                 foreach ($this->config('fields') as $field) {
                     $key = sprintf('%s_%s', $field, $language);
