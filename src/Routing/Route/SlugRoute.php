@@ -7,7 +7,7 @@ use Cake\Routing\Route\Route;
 class SlugRoute extends Route
 {
 
-    function parse($url)
+    function parse($url, $method = '')
     {
         $params = parent::parse($url);
         if (empty($params)) {

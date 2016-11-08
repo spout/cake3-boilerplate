@@ -30,7 +30,7 @@ Router::scope('/', function (RouteBuilder $routes) {
             $routes->connect(
                 '/:path',
                 ['controller' => 'Contents', 'action' => 'view'],
-                ['_name' => 'contentsView', 'routeClass' => 'ContentsRoute', 'lang' => $lang, 'pass' => ['path'], 'path' => '[-/\w\d]+']
+                [/*'_name' => 'contentsView',*/ 'routeClass' => 'ContentsRoute', 'lang' => $lang, 'pass' => ['path'], 'path' => '[-/\w\d]+']
             );
             $routes->connect('/contact', ['controller' => 'Contacts', 'action' => 'add']);
             $routes->fallbacks('DashedRoute');
